@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анализ Динамики Продаж: Апрель - Июль</title>
+    <title>Аналіз Динаміки Продажів: Квітень - Липень</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -80,16 +80,16 @@
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Анализ Динамики Продаж</h1>
-            <p class="text-lg md:text-xl text-gray-600 mt-2">Причины Остановки Роста в Июле: Период Апрель - Июль</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Аналіз Динаміки Продажів</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">Причини Зупинки Зростання у Липні: Період Квітень - Липень</p>
         </header>
 
         
         <section class="mb-16">
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Динамика Роста: Влияние Акции и Нового Ассортимента</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Динаміка Зростання: Вплив Акції та Нового Асортименту</h2>
                 <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">
-                    Запуск маркетинговой акции и введение нового ассортимента в мае привели к резкому росту продаж и привлекли значительное количество клиентов, оформивших бонусные карты. Пик выручки был достигнут в июне, однако уже в этот момент количество зарегистрированных лояльных клиентов начало снижаться.
+                    Запуск маркетингової акції та введення нового асортименту у травні призвели до різкого зростання продажів та залучили значну кількість клієнтів, які оформили бонусні картки. Пік виручки було досягнуто у червні, проте вже в цей момент кількість зареєстрованих лояльних клієнтів почала знижуватися.
                 </p>
                 <div class="chart-container">
                     <canvas id="salesVsLoyalClientsChart"></canvas>
@@ -100,9 +100,9 @@
         
         <section class="mb-16">
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Структура Покупателей: Оценка Доли Клиентов без Карт</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Структура Покупців: Оцінка Частки Клієнтів без Карток</h2>
                 <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">
-                    Данные по клиентам с бонусными картами не в полной мере отражают картину. Учитывая средний чек в 370 грн, мы можем оценить, что общее число покупателей оставалось стабильно высоким. Отток клиентов, пришедших по акции, был компенсирован притоком новых покупателей без карт лояльности.
+                    Дані щодо клієнтів з бонусними картками не повністю відображають картину. Враховуючи середній чек у 370 грн, ми можемо оцінити, що загальна кількість покупців залишалася стабільно високою. Відтік клієнтів, що прийшли по акції, був компенсований притоком нових покупців без карток лояльності.
                 </p>
                 <div class="chart-container">
                     <canvas id="clientMixChart"></canvas>
@@ -113,44 +113,44 @@
         
         <section class="mb-16">
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Июльский Спад: Операционные Причины</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Липневий Спад: Операційні Причини</h2>
                  <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">
-                    Высокий потенциал роста, созданный в мае, не был реализован в июле. Ключевой причиной стало начало сбоев в операционной деятельности, которые привели к снижению продаж.
+                    Високий потенціал зростання, створений у травні, не був реалізований у липні. Ключовою причиною став початок збоїв в операційній діяльності, які призвели до зниження продажів.
                 </p>
                 <div class="max-w-3xl mx-auto mt-8">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                         <div class="timeline-content">
-                            <div class="font-semibold">Май: Успешная акция и ввод нового ассортимента</div>
-                            <div class="text-sm text-gray-500">Резкий рост продаж и приток клиентов.</div>
+                            <div class="font-semibold">Травень: Успішна акція та введення нового асортименту</div>
+                            <div class="text-sm text-gray-500">Різке зростання продажів та приплив клієнтів.</div>
                         </div>
                     </div>
                      <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                         <div class="timeline-content">
-                            <div class="font-semibold">Июнь: Пик продаж и рост среднего чека</div>
-                            <div class="text-sm text-gray-500">Достижение максимальной выручки. Начало оттока клиентов, пришедших по акции.</div>
+                            <div class="font-semibold">Червень: Пік продажів та зростання середнього чека</div>
+                            <div class="text-sm text-gray-500">Досягнення максимальної виручки. Початок відтоку клієнтів, що прийшли по акції.</div>
                         </div>
                     </div>
                      <div class="timeline-item">
                         <div class="timeline-dot ring-4 ring-red-300" style="background-color: #E03616;"></div>
                         <div class="timeline-line"></div>
                         <div class="timeline-content">
-                            <div class="font-semibold text-red-600">Конец Июня: Операционный сбой</div>
+                            <div class="font-semibold text-red-600">Кінець Червня: Операційний збій</div>
                             <div class="text-sm text-gray-500">
-                                Периодические сбои в поставках ключевых товаров, в частности картриджей А-категории (XROS).
+                                Періодичні збої в поставках ключових товарів, зокрема картриджів А-категорії (XROS).
                                 <br>
-                                Неактуальные данные по остаткам в некоторых магазинах усугубили ситуацию, а клиенты без акции не брали то, что было в наличии.
+                                Неактуальні дані щодо залишків у деяких магазинах погіршили ситуацію, а клієнти без акції не брали те, що було в наявності.
                             </div>
                         </div>
                     </div>
                      <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="font-semibold">Июль: Снижение продаж</div>
-                            <div class="text-sm text-gray-500">Проблемы с логистикой и отсутствие ключевого товара привели к падению выручки.</div>
+                            <div class="font-semibold">Липень: Зниження продажів</div>
+                            <div class="text-sm text-gray-500">Проблеми з логістикою та відсутність ключового товару призвели до падіння виручки.</div>
                         </div>
                     </div>
                 </div>
@@ -160,9 +160,9 @@
         
         <section class="mb-16">
             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Парадокс Маржинальности</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Парадокс Маржинальності</h2>
                 <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">
-                    Несмотря на снижение выручки в июле, наблюдается устойчивый рост торговой маржи. Это связано с успешными переговорами с поставщиком, позволившими получить более выгодные условия закупки, а также с переходом на продажу комплектов, что повысило маржинальность каждой сделки, хотя и оттолкнуло клиентов, ищущих минимальную цену.
+                    Незважаючи на зниження виручки у липні, спостерігається стійке зростання торгової маржі. Це пов'язано з успішними переговорами з постачальником, що дозволили отримати більш вигідні умови закупівлі, а також з переходом на продаж комплектів, що підвищило маржинальність кожної угоди, хоча й відштовхнуло клієнтів, які шукали мінімальну ціну.
                 </p>
                 <div class="chart-container">
                     <canvas id="salesVsMarginChart"></canvas>
@@ -172,53 +172,53 @@
 
         
         <section class="mb-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Ключевые Причины Отсутствия Роста</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Ключові Причини Відсутності Зростання</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-red-500">❌</div>
-                    <h3 class="text-xl font-bold mb-2">Отток Лояльных Клиентов</h3>
-                    <p class="text-gray-600">Майская акция привлекла клиентов, но не смогла удержать их. Отсутствие повторных покупок и снижение числа пользователей бонусных карт стало одной из причин остановки роста.</p>
+                    <h3 class="text-xl font-bold mb-2">Відтік Лояльних Клієнтів</h3>
+                    <p class="text-gray-600">Травнева акція залучила клієнтів, але не змогла їх утримати. Відсутність повторних покупок і зниження кількості користувачів бонусних карток стало однією з причин зупинки зростання.</p>
                 </div>
                 <div class="kpi-card border-t-4 border-red-500">
                      <div class="text-3xl mb-4 text-red-500">📦</div>
-                    <h3 class="text-xl font-bold mb-2">Сбои в Цепочке Поставок</h3>
-                    <p class="text-gray-600">Периодическое отсутствие в продаже ключевых товаров (картриджи A-категории) и неактуальные остатки напрямую препятствовали реализации спроса и отпугивали покупателей.</p>
+                    <h3 class="text-xl font-bold mb-2">Збої в Ланцюжку Поставок</h3>
+                    <p class="text-gray-600">Періодична відсутність у продажу ключових товарів (картриджі А-категорії) та неактуальні залишки безпосередньо перешкоджали реалізації попиту і відлякували покупців.</p>
                 </div>
                 <div class="kpi-card border-t-4 border-yellow-500">
                     <div class="text-3xl mb-4 text-yellow-500">📈</div>
-                    <h3 class="text-xl font-bold mb-2">Остановка Роста</h3>
-                    <p class="text-gray-600">Продажи выросли относительно апреля, но операционные проблемы в июле не позволили достичь стабильного и устойчивого роста, который был бы ожидаем после успешной майской кампании.</p>
+                    <h3 class="text-xl font-bold mb-2">Зупинка Зростання</h3>
+                    <p class="text-gray-600">Продажі зросли відносно квітня, але операційні проблеми у липні не дозволили досягти стабільного та стійкого зростання, яке було б очікуваним після успішної травневої кампанії.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Пути Решения и Рекомендации</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Шляхи Вирішення</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-green-500">📊</div>
-                    <h3 class="text-xl font-bold mb-2">Внедрение Системы Контроля</h3>
-                    <p class="text-gray-600">Перенос матрицы в Qlik для автоматического и точного контроля над остатками, что позволит минимизировать операционные сбои и избежать потери продаж.</p>
+                    <h3 class="text-xl font-bold mb-2">Впровадження Системи Контролю</h3>
+                    <p class="text-gray-600">Перенесення матриці в Qlik для автоматичного та точного контролю над залишками, що дозволить мінімізувати операційні збої та уникнути втрати продажів.</p>
                 </div>
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-green-500">🚀</div>
-                    <h3 class="text-xl font-bold mb-2">Развитие Ассортимента</h3>
-                    <p class="text-gray-600">Фокус на расширении ассортимента в растущих категориях, что поможет удовлетворить текущий спрос и привлечь новых клиентов.</p>
+                    <h3 class="text-xl font-bold mb-2">Розвиток Асортименту</h3>
+                    <p class="text-gray-600">Фокус на розширенні асортименту в зростаючих категоріях, що допоможе задовольнити поточний попит та залучити нових клієнтів.</p>
                 </div>
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-green-500">🧑‍🏫</div>
-                    <h3 class="text-xl font-bold mb-2">Обучение Персонала</h3>
-                    <p class="text-gray-600">Проведение обучения для сотрудников по работе с новым ассортиментом и улучшению качества обслуживания.</p>
+                    <h3 class="text-xl font-bold mb-2">Навчання Персоналу</h3>
+                    <p class="text-gray-600">Проведення навчання для співробітників щодо роботи з новим асортиментом та покращення якості обслуговування.</p>
                 </div>
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-green-500">💡</div>
-                    <h3 class="text-xl font-bold mb-2">Повторение Успешных Кейсов</h3>
-                    <p class="text-gray-600">Анализ и повторение успешных маркетинговых стратегий, подобных акции с картриджами, для стимулирования продаж и привлечения новой аудитории.</p>
+                    <h3 class="text-xl font-bold mb-2">Повторення Успішних Кейсів</h3>
+                    <p class="text-gray-600">Аналіз і повторення успішних маркетингових стратегій, подібних до акції з картриджами, для стимулювання продажів та залучення нової аудиторії.</p>
                 </div>
                 <div class="kpi-card">
                     <div class="text-3xl mb-4 text-green-500">🚚</div>
-                    <h3 class="text-xl font-bold mb-2">Развитие Сервиса Доставки</h3>
-                    <p class="text-gray-600">Использование сервиса доставки в качестве дополнительного промо-инструмента для повышения удобства покупки и расширения клиентской базы.</p>
+                    <h3 class="text-xl font-bold mb-2">Розвиток Сервісу Доставки</h3>
+                    <p class="text-gray-600">Використання сервісу доставки як додаткового промо-інструменту для підвищення зручності покупки та розширення клієнтської бази.</p>
                 </div>
             </div>
         </section>
@@ -233,7 +233,7 @@
         const totalClientsData = salesData.map(sales => Math.round(sales / averageCheck));
         const nonLoyalClientsData = totalClientsData.map((total, i) => total - loyalClientsData[i]);
         
-        const labels = ['Апрель', 'Май', 'Июнь', 'Июль'];
+        const labels = ['Квітень', 'Травень', 'Червень', 'Липень'];
 
         const palette = {
             primary: '#00A6A6',
@@ -259,14 +259,14 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Продажи, грн.',
+                    label: 'Продажі, грн.',
                     data: salesData,
                     backgroundColor: palette.primary,
                     borderColor: palette.primary,
                     yAxisID: 'y',
                     order: 2
                 }, {
-                    label: 'Клиенты с картой',
+                    label: 'Клієнти з карткою',
                     data: loyalClientsData,
                     borderColor: palette.secondary,
                     backgroundColor: palette.secondary,
@@ -286,7 +286,7 @@
                         position: 'left',
                         title: {
                             display: true,
-                            text: 'Продажи, грн.'
+                            text: 'Продажі, грн.'
                         }
                     },
                     y1: {
@@ -295,7 +295,7 @@
                         position: 'right',
                         title: {
                             display: true,
-                            text: 'Количество клиентов'
+                            text: 'Кількість клієнтів'
                         },
                         grid: {
                             drawOnChartArea: false
@@ -322,11 +322,11 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Клиенты с картой',
+                    label: 'Клієнти з карткою',
                     data: loyalClientsData,
                     backgroundColor: palette.secondary,
                 }, {
-                    label: 'Клиенты без карты (оценка)',
+                    label: 'Клієнти без картки (оцінка)',
                     data: nonLoyalClientsData,
                     backgroundColor: palette.primary,
                 }]
@@ -342,7 +342,7 @@
                         stacked: true,
                         title: {
                             display: true,
-                            text: 'Общее количество клиентов'
+                            text: 'Загальна кількість клієнтів'
                         }
                     }
                 },
@@ -366,7 +366,7 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Продажи, грн.',
+                    label: 'Продажі, грн.',
                     data: salesData,
                     borderColor: palette.primary,
                     backgroundColor: palette.primary + '33',
@@ -374,7 +374,7 @@
                     tension: 0.3,
                     fill: true
                 }, {
-                    label: 'Торговая маржа, %',
+                    label: 'Торгова маржа, %',
                     data: marginData,
                     borderColor: palette.accent,
                     backgroundColor: palette.accent,
@@ -392,7 +392,7 @@
                         position: 'left',
                          title: {
                             display: true,
-                            text: 'Продажи, грн.'
+                            text: 'Продажі, грн.'
                         }
                     },
                     y1: {
@@ -401,7 +401,7 @@
                         position: 'right',
                         title: {
                             display: true,
-                            text: 'Торговая маржа, %'
+                            text: 'Торгова маржа, %'
                         },
                         grid: {
                             drawOnChartArea: false,
