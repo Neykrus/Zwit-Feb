@@ -6,7 +6,7 @@
     <title>Аналітика Дашборд - Лютий 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Animation Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,12 +33,12 @@
             background-color: var(--bg-dark);
             font-family: 'Urbanist', sans-serif;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.4;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Анімований фон (Blobs) */
+        /* Анімований фон */
         .bg-blobs {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
@@ -53,26 +53,26 @@
             opacity: 0.4;
             animation: moveBlob 15s infinite alternate ease-in-out;
         }
-        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: rgba(222, 255, 154, 0.15); }
-        .blob-2 { bottom: -20%; right: -10%; width: 600px; height: 600px; background: rgba(255, 71, 87, 0.08); animation-delay: -5s; }
-        .blob-3 { top: 40%; left: 50%; width: 400px; height: 400px; background: rgba(222, 255, 154, 0.1); animation-delay: -10s; }
+        .blob-1 { top: -10%; left: -10%; width: 400px; height: 400px; background: rgba(222, 255, 154, 0.12); }
+        .blob-2 { bottom: -20%; right: -10%; width: 500px; height: 500px; background: rgba(255, 71, 87, 0.06); animation-delay: -5s; }
+        .blob-3 { top: 40%; left: 50%; width: 300px; height: 300px; background: rgba(222, 255, 154, 0.08); animation-delay: -10s; }
 
         @keyframes moveBlob {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(50px, 50px) scale(1.1); }
-            100% { transform: translate(-50px, -20px) scale(0.9); }
+            50% { transform: translate(40px, 40px) scale(1.1); }
+            100% { transform: translate(-40px, -15px) scale(0.9); }
         }
 
         /* 2. НАВІГАЦІЯ */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
-            background: rgba(10, 10, 10, 0.7);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: rgba(10, 10, 10, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -80,43 +80,39 @@
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--text-main);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-decoration: none;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
 
-        .logo span { color: var(--neon-green); text-shadow: 0 0 15px var(--neon-green-glow); }
+        .logo span { color: var(--neon-green); }
 
-        .nav-links { display: flex; gap: 35px; list-style: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 13px;
             transition: all 0.3s ease;
-            position: relative;
         }
         .nav-links a:hover, .nav-links a.active { color: var(--neon-green); }
 
-        .mobile-menu-btn { display: none; font-size: 24px; color: white; cursor: pointer; background: none; border: none; }
-
         /* 3. СПІЛЬНІ СТИЛІ СЕКЦІЙ */
         section {
-            padding: 120px 5% 60px;
-            max-width: 1400px;
+            padding: 60px 5% 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-header { margin-bottom: 50px; text-align: center; }
+        .section-header { margin-bottom: 30px; text-align: center; }
         .section-header h2 {
-            font-size: 46px;
-            margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 5px;
             color: var(--text-main);
-            font-weight: 800;
+            font-weight: 900;
         }
         .section-header h2 span { color: var(--neon-green); }
 
@@ -124,80 +120,83 @@
         .grid-bento {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 25px;
+            gap: 15px;
         }
 
         .card {
             background-color: var(--bg-card);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 35px;
+            border-radius: 12px;
+            padding: 18px;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s ease-out;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
         
         .card:hover { 
-            border-color: rgba(222, 255, 154, 0.4); 
-            transform: translateY(-5px); 
-            box-shadow: 0 15px 35px rgba(222, 255, 154, 0.1);
+            border-color: rgba(222, 255, 154, 0.3); 
+            transform: translateY(-2px); 
         }
         
         .card.highlight { 
-            background: linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.4) 100%);
-            border: 1px solid rgba(222, 255, 154, 0.2); 
+            background: linear-gradient(135deg, rgba(25,25,25,0.85) 0%, rgba(15,15,15,0.5) 100%);
+            border: 1px solid rgba(222, 255, 154, 0.15);
         }
 
         .col-span-12 { grid-column: span 12; }
         .col-span-8 { grid-column: span 8; }
         .col-span-6 { grid-column: span 6; }
         .col-span-4 { grid-column: span 4; }
-        .col-span-3 { grid-column: span 3; }
 
         /* 5. ЕЛЕМЕНТИ КОНТЕНТУ */
-        h3 { font-size: 24px; color: var(--text-main); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
-        h3 i { color: var(--neon-green); font-size: 28px; }
-        .card p { color: #cbd5e1; font-size: 18px; margin-bottom: 15px; }
+        h3 { font-size: 20px; color: var(--text-main); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-weight: 800; }
+        h3 i { color: var(--neon-green); font-size: 22px; }
+        .card p { color: #cbd5e1; font-size: 15px; margin-bottom: 10px; }
+        .card strong { color: var(--neon-green); }
 
         .number-stat { margin-top: auto; }
-        .number-stat .value { font-size: 64px; font-weight: 800; line-height: 1; color: var(--text-main); text-shadow: 0 4px 10px rgba(0,0,0,0.3);}
-        .number-stat .value.green { color: var(--neon-green); text-shadow: 0 0 20px rgba(222, 255, 154, 0.2); }
-        .number-stat .value.red { color: var(--neon-red); text-shadow: 0 0 20px rgba(255, 71, 87, 0.2); }
-        .number-stat .label { font-size: 16px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 10px; letter-spacing: 0.5px;}
+        .number-stat .value { font-size: 52px; font-weight: 900; line-height: 1; color: var(--text-main); }
+        .number-stat .value.green { color: var(--neon-green); }
+        .number-stat .value.red { color: var(--neon-red); }
+        .number-stat .label { font-size: 14px; color: var(--text-muted); font-weight: 800; text-transform: uppercase; margin-top: 5px; }
+        .number-stat .delta { font-size: 24px; font-weight: 900; margin-top: 2px; color: var(--neon-green); }
 
         .list-styled { list-style: none; }
-        .list-styled li { position: relative; padding-left: 35px; margin-bottom: 15px; font-size: 18px; color: #e2e8f0; }
-        .list-styled li i { position: absolute; left: 0; top: 5px; font-size: 18px;}
+        .list-styled li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 15px; color: #e2e8f0; font-weight: 700; }
+        .list-styled li i { position: absolute; left: 0; top: 3px; font-size: 15px;}
         .list-styled li i.fa-check { color: var(--neon-green); }
         .list-styled li i.fa-xmark { color: var(--neon-red); }
 
-        /* ЗБІЛЬШЕНІ ГРАФІКИ */
-        .bar-chart { display: flex; flex-direction: column; gap: 20px; width: 100%; margin-top: 25px;}
-        .bar-row { display: flex; align-items: center; gap: 20px; }
-        .bar-label { width: 250px; font-weight: 800; font-size: 14px; color: var(--text-muted); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .bar-track { flex-grow: 1; background: rgba(255,255,255,0.05); height: 42px; border-radius: 8px; position: relative; overflow: hidden; box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);}
+        /* ДИЗАЙН ГРАФІКІВ: КОМПАКТНІ */
+        .bar-chart { display: flex; flex-direction: column; gap: 15px; width: 100%; margin-top: 15px;}
+        
+        .bar-info { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 5px; width: 100%; }
+        .bar-label { font-weight: 900; font-size: 15px; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.3px; }
+        .bar-value-text { font-weight: 900; font-size: 15px; color: var(--neon-green); }
+        .bar-value-text.red { color: var(--neon-red); }
+
+        .bar-track { background: rgba(255,255,255,0.04); height: 32px; border-radius: 8px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.02); width: 100%; }
         .bar-fill { 
-            height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; 
-            padding-right: 15px; font-weight: 900; color: #000; font-size: 14px; position: absolute; left: 0;
+            height: 100%; border-radius: 8px; position: absolute; left: 0;
             width: 0; 
-            transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
         
-        table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 20px; }
-        th, td { padding: 18px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 16px; }
-        th { color: var(--neon-green); font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 15px; }
+        th { color: var(--neon-green); font-weight: 900; text-transform: uppercase; font-size: 13px; }
         tr:last-child td { border-bottom: none; }
-        .text-green { color: var(--neon-green) !important; font-weight: 700; }
-        .text-red { color: var(--neon-red) !important; font-weight: 700; }
+        .text-green { color: var(--neon-green) !important; font-weight: 900; }
+        .text-red { color: var(--neon-red) !important; font-weight: 900; }
 
         /* Герой Секція */
         .hero {
-            height: 100vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -207,54 +206,48 @@
             position: relative;
         }
         .hero h1 { 
-            font-size: 85px; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; 
-            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            font-size: 64px; line-height: 1.1; margin-bottom: 15px; text-transform: uppercase; 
+            font-weight: 900;
         }
         .hero h1 span { color: var(--neon-green); }
-        .hero p { font-size: 26px; color: var(--text-muted); max-width: 800px; margin-bottom: 60px; font-weight: 500; }
+        .hero p { font-size: 22px; color: var(--text-muted); max-width: 800px; margin-bottom: 30px; font-weight: 700; }
 
         @media (max-width: 1024px) {
-            .col-span-3, .col-span-4 { grid-column: span 6; }
+            .col-span-4 { grid-column: span 12; }
             .col-span-8 { grid-column: span 12; }
-            .hero h1 { font-size: 65px; }
-            .bar-label { width: 180px; }
+            .hero h1 { font-size: 50px; }
+            .bar-track { height: 28px; }
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 50px; }
-            .bar-row { flex-direction: column; align-items: flex-start; gap: 8px; }
-            .bar-track { width: 100%; height: 36px; }
-            .bar-label { width: 100%; }
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 18px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ФОНОВІ АНІМАЦІЇ -->
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- НАВІГАЦІЯ -->
     <nav id="navbar">
         <a href="#home" class="logo">Pod <span>Shop</span></a>
-        <button class="mobile-menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i></button>
         <ul class="nav-links" id="nav-links">
             <li><a href="#finance">Фінанси</a></li>
             <li><a href="#trends">Тренди</a></li>
             <li><a href="#inventory">Запаси</a></li>
-            <li><a href="#assortment">Асортимент</a></li>
+            <li><a href="#assortment">Оптимізація</a></li>
             <li><a href="#investments">Інвестиції</a></li>
             <li><a href="#strategy">Стратегія</a></li>
         </ul>
     </nav>
 
-    <!-- ГЕРОЙ СЕКЦІЯ -->
     <header class="hero" id="home">
         <h1 data-aos="zoom-out" data-aos-duration="1000">Аналітика<br><span>Лютий 2026</span></h1>
-        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Ключові показники фінансів, запасів та асортименту.</p>
+        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Компактний огляд виторгу та динаміки брендів.</p>
     </header>
 
     <!-- СЕКЦІЯ 1: ФІНАНСИ -->
@@ -264,36 +257,45 @@
         </div>
 
         <div class="grid-bento">
-            <!-- Динаміка мережі -->
             <div class="card col-span-8 highlight" data-aos="fade-up">
-                <h3><i class="fa-solid fa-chart-line"></i> Динаміка роздрібної мережі</h3>
+                <h3><i class="fa-solid fa-chart-line"></i> Динаміка мережі</h3>
                 <div class="bar-chart">
-                    <div class="bar-row">
-                        <div class="bar-label">Рідини</div>
+                    <div class="bar-item">
+                        <div class="bar-info">
+                            <div class="bar-label">Рідини</div>
+                            <div class="bar-value-text">5.23 млн ₴ (+3.8%)</div>
+                        </div>
                         <div class="bar-track">
-                            <div class="bar-fill" data-width="100%" style="background: var(--neon-green);">5.23 млн ₴ (+3.8%)</div>
+                            <div class="bar-fill" data-width="100%" style="background: var(--neon-green);"></div>
                         </div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Комплектуючі</div>
+                    <div class="bar-item">
+                        <div class="bar-info">
+                            <div class="bar-label">Комплектуючі</div>
+                            <div class="bar-value-text">2.05 млн ₴ (+5.0%)</div>
+                        </div>
                         <div class="bar-track">
-                            <div class="bar-fill" data-width="40%" style="background: #cbd5e1;">2.05 млн ₴ (+5.0%)</div>
+                            <div class="bar-fill" data-width="40%" style="background: #cbd5e1;"></div>
                         </div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Под-системи</div>
+                    <div class="bar-item">
+                        <div class="bar-info">
+                            <div class="bar-label">Пристрої</div>
+                            <div class="bar-value-text red">932 157 ₴ (-13.0%)</div>
+                        </div>
                         <div class="bar-track">
-                            <div class="bar-fill" data-width="18%" style="background: var(--neon-red);">932 157 ₴ (-13.0%)</div>
+                            <div class="bar-fill" data-width="18%" style="background: var(--neon-red);"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="card col-span-4" data-aos="fade-up" data-aos-delay="200">
-                <h3><i class="fa-solid fa-arrow-trend-up"></i> Загальна Динаміка</h3>
+                <h3><i class="fa-solid fa-arrow-trend-up"></i> Динаміка</h3>
                 <div class="number-stat">
                     <div class="value green">+1.9%</div>
-                    <div class="label">Ріст виторгу мережі</div>
+                    <div class="delta">+152 068 ₴</div>
+                    <div class="label">Виторг мережі</div>
                 </div>
             </div>
         </div>
@@ -305,313 +307,257 @@
             <h2>Тренди та <span>Динаміка</span></h2>
         </div>
         <div class="grid-bento">
-            <!-- Лідери росту -->
             <div class="card col-span-6 highlight" data-aos="fade-right">
-                <h3><i class="fa-solid fa-arrow-trend-up"></i> Лідери росту (Лютий)</h3>
+                <h3><i class="fa-solid fa-arrow-trend-up"></i> Лідери росту</h3>
                 <table>
                     <thead>
-                        <tr><th>Категорія</th><th>Приріст</th><th>% Росту</th></tr>
+                        <tr><th>Категорія</th><th>Приріст</th><th>%</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Ароматизатори ElfLiQ</td><td class="text-green">+479 300 ₴</td><td class="text-green">+117.5%</td></tr>
-                        <tr><td>Набір Hype</td><td class="text-green">+41 710 ₴</td><td class="text-green">+59.5%</td></tr>
-                        <tr><td>Набір Elfliq</td><td class="text-green">+53 600 ₴</td><td class="text-green">+64.1%</td></tr>
-                        <tr><td>Картриджі GeekVape</td><td class="text-green">+25 311 ₴</td><td class="text-green">+23.8%</td></tr>
+                        <tr><td>ElfLiQ (Ароми)</td><td class="text-green">+479 300</td><td class="text-green">+117.5%</td></tr>
+                        <tr><td>Набір Hype</td><td class="text-green">+41 710</td><td class="text-green">+59.5%</td></tr>
+                        <tr><td>Набір Elfliq</td><td class="text-green">+53 600</td><td class="text-green">+64.1%</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Лідери падіння -->
             <div class="card col-span-6" data-aos="fade-left">
-                <h3><i class="fa-solid fa-arrow-trend-down" style="color: var(--neon-red);"></i> Зона падіння (Лютий)</h3>
+                <h3><i class="fa-solid fa-arrow-trend-down" style="color: var(--neon-red);"></i> Зона падіння</h3>
                 <table>
                     <thead>
-                        <tr><th>Категорія</th><th>Спад</th><th>% спаду</th></tr>
+                        <tr><th>Категорія</th><th>Спад</th><th>%</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Oxva (Девайси)</td><td class="text-red">-91 804 ₴</td><td class="text-red">-59.3%</td></tr>
-                        <tr><td>In Bottle Puzzle</td><td class="text-red">-80 920 ₴</td><td class="text-red">-52.3%</td></tr>
-                        <tr><td>Набір Octobar</td><td class="text-red">-55 171 ₴</td><td class="text-red">-7.9%</td></tr>
-                        <tr><td>ChaserLab</td><td class="text-red">-58 258 ₴</td><td class="text-red">-4.8%</td></tr>
+                        <tr><td>Oxva (Девайси)</td><td class="text-red">-91 804</td><td class="text-red">-59.3%</td></tr>
+                        <tr><td>In Bottle Puzzle</td><td class="text-red">-80 920</td><td class="text-red">-52.3%</td></tr>
+                        <tr><td>Набір Octobar</td><td class="text-red">-55 171</td><td class="text-red">-7.9%</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- АНАЛІЗ РІДИН - ВЕЛИКИЙ БЛОК -->
+            <!-- АНАЛІЗ РІДИН -->
             <div class="card col-span-12 highlight" data-aos="zoom-in">
-                <h3><i class="fa-solid fa-droplet"></i> Динаміка Рідин за брендами</h3>
+                <h3><i class="fa-solid fa-droplet"></i> Динаміка Рідин (Повний перелік)</h3>
                 <div class="bar-chart">
-                    <div class="bar-row">
-                        <div class="bar-label">ChaserLab</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);">1 149 022 ₴ (-4.8%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">ChaserLab</div><div class="bar-value-text red">1 149 022 ₴ (-4.8%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Lucky (Ароми)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="82%" style="background: var(--neon-green);">935 510 ₴ (+7.2%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Lucky (Ароми)</div><div class="bar-value-text">935 510 ₴ (+7.2%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="82%" style="background: var(--neon-green);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">ElfLiQ (Ароми)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="78%" style="background: var(--neon-green);">887 100 ₴ (+117.5%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">ElfLiQ (Ароми)</div><div class="bar-value-text">887 100 ₴ (+117.5%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="78%" style="background: var(--neon-green);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Octobar</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="56%" style="background: var(--neon-red);">640 560 ₴ (-7.9%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Octobar (Набір)</div><div class="bar-value-text red">640 560 ₴ (-7.9%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="56%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Lucky (Набір)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="34%" style="background: var(--neon-red);">395 650 ₴ (-11.2%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Lucky (Набір)</div><div class="bar-value-text red">395 650 ₴ (-11.2%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="34%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Hype (Набір)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="10%" style="background: var(--neon-green);">111 820 ₴ (+59.5%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Aroma (Ароми)</div><div class="bar-value-text red">215 320 ₴ (-0.7%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="19%" style="background: #cbd5e1;"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">FlavorLab (Набір)</div><div class="bar-value-text red">163 270 ₴ (-1.4%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="14%" style="background: #cbd5e1;"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Elfliq (Набір)</div><div class="bar-value-text">137 250 ₴ (+64.1%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="12%" style="background: var(--neon-green);"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Punch (Набір)</div><div class="bar-value-text red">115 714 ₴ (-6.5%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="10%" style="background: var(--neon-red);"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Hype (Набір)</div><div class="bar-value-text">111 820 ₴ (+59.5%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="9.5%" style="background: var(--neon-green);"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Wick Wire (Набір)</div><div class="bar-value-text red">103 000 ₴ (-19.7%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="9%" style="background: var(--neon-red);"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">In Bottle Puzzle</div><div class="bar-value-text red">73 900 ₴ (-52.3%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="7%" style="background: var(--neon-red);"></div></div>
                     </div>
                 </div>
             </div>
 
-            <!-- ДИНАМІКА ЗАЛІЗО - ВЕЛИКІ БЛОКИ -->
+            <!-- ГРАФІК POD-СИСТЕМ -->
             <div class="card col-span-12 highlight" data-aos="fade-up">
-                <h3><i class="fa-solid fa-mobile-screen"></i> Динаміка Заліза (Девайси)</h3>
+                <h3><i class="fa-solid fa-mobile-screen"></i> Графік POD-систем</h3>
                 <div class="bar-chart">
-                    <div class="bar-row">
-                        <div class="bar-label">Vaporesso</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);">552 401 ₴ (-4.3%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Vaporesso</div><div class="bar-value-text red">552 401 ₴ (-4.3%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Voopoo</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="36%" style="background: var(--neon-red);">197 348 ₴ (-10.5%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Voopoo</div><div class="bar-value-text red">197 348 ₴ (-10.5%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="36%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">GeekVape</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="13%" style="background: var(--neon-green);">71 247 ₴ (+25.6%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">GeekVape</div><div class="bar-value-text">71 247 ₴ (+25.6%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="13%" style="background: var(--neon-green);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Oxva</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="11%" style="background: var(--neon-red);">63 043 ₴ (-59.3%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Oxva</div><div class="bar-value-text red">63 043 ₴ (-59.3%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="11%" style="background: var(--neon-red);"></div></div>
                     </div>
                 </div>
             </div>
 
+            <!-- ГРАФІК КАРТРИДЖІВ -->
             <div class="card col-span-12 highlight" data-aos="fade-up">
-                <h3><i class="fa-solid fa-plug"></i> Динаміка Заліза (Картриджі)</h3>
+                <h3><i class="fa-solid fa-plug"></i> Графік картриджів та комплектуючих</h3>
                 <div class="bar-chart">
-                    <div class="bar-row">
-                        <div class="bar-label">Vaporesso</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-green);">1 052 549 ₴ (+4.2%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Vaporesso</div><div class="bar-value-text">1 052 549 ₴ (+4.2%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-green);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Voopoo</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="41%" style="background: var(--neon-green);">428 694 ₴ (+0.8%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Voopoo</div><div class="bar-value-text">428 694 ₴ (+0.8%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="41%" style="background: var(--neon-green);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Oxva</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="16%" style="background: var(--neon-red);">164 958 ₴ (-3.6%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Oxva</div><div class="bar-value-text red">164 958 ₴ (-3.6%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="16%" style="background: var(--neon-red);"></div></div>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">GeekVape</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="13%" style="background: var(--neon-green);">131 500 ₴ (+23.8%)</div></div>
-                    </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Lost Vape</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="10%" style="background: var(--neon-green);">99 931 ₴ (+29.3%)</div></div>
+                    <div class="bar-item">
+                        <div class="bar-info"><div class="bar-label">Випарники та інше</div><div class="bar-value-text">174 732 ₴ (+1.2%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="17%" style="background: #cbd5e1;"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 2: ЗАПАСИ ТА ОБОРОТНІСТЬ -->
+    <!-- СЕКЦІЯ 2: ЗАПАСИ -->
     <section id="inventory">
         <div class="section-header" data-aos="fade-up">
-            <h2>Оборотність та Неліквід</h2>
+            <h2>Оборотність</h2>
         </div>
 
         <div class="grid-bento">
             <div class="card col-span-12 highlight" data-aos="zoom-in-up">
-                <h3><i class="fa-solid fa-stopwatch"></i> Динаміка Оборотності (Дні)</h3>
-                <svg class="area-chart-svg" viewBox="0 0 1000 250" style="width: 100%; height: auto; margin-top: 20px;">
-                    <polyline points="100,180 500,50 900,100" fill="none" stroke="var(--neon-green)" stroke-width="4"></polyline>
-                    <circle cx="100" cy="180" r="8" fill="var(--neon-green)"></circle>
-                    <circle cx="500" cy="50" r="8" fill="var(--neon-green)"></circle>
-                    <circle cx="900" cy="100" r="8" fill="var(--neon-green)"></circle>
-                    <text x="100" y="220" fill="#fff" text-anchor="middle">Грудень: 98.1</text>
-                    <text x="500" y="30" fill="#fff" text-anchor="middle">Січень: 107.8</text>
-                    <text x="900" y="80" fill="var(--neon-green)" text-anchor="middle">Лютий: 103.5 (-4.3)</text>
+                <h3><i class="fa-solid fa-stopwatch"></i> Динаміка (Дні)</h3>
+                <svg viewBox="0 0 1000 200" style="width: 100%; height: auto; margin-top: 10px;">
+                    <polyline points="100,150 500,40 900,80" fill="none" stroke="var(--neon-green)" stroke-width="4"></polyline>
+                    <circle cx="100" cy="150" r="6" fill="var(--neon-green)"></circle>
+                    <circle cx="500" cy="40" r="6" fill="var(--neon-green)"></circle>
+                    <circle cx="900" cy="80" r="6" fill="var(--neon-green)"></circle>
+                    <text x="100" y="180" fill="#fff" text-anchor="middle" font-size="14">Гр: 98.1</text>
+                    <text x="500" y="25" fill="#fff" text-anchor="middle" font-size="14">Січ: 107.8</text>
+                    <text x="900" y="65" fill="var(--neon-green)" text-anchor="middle" font-size="14">Лют: 103.5 (-4.3)</text>
                 </svg>
             </div>
 
             <div class="card col-span-8" data-aos="fade-right">
-                <h3><i class="fa-solid fa-box-open"></i> Ліквідація мертвого стоку (>100 днів)</h3>
+                <h3><i class="fa-solid fa-box-open"></i> Мертвий сток</h3>
                 <table>
                     <thead>
-                        <tr><th>Вік (Дні)</th><th>Січень (₴)</th><th>Лютий (₴)</th><th>Динаміка</th></tr>
+                        <tr><th>Вік (Дні)</th><th>Лют (₴)</th><th>Динаміка</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>100 - 200</td><td>1 027 570</td><td>1 093 105</td><td class="text-red">+ 65 534</td></tr>
-                        <tr><td>200 - 400</td><td>379 249</td><td>367 109</td><td class="text-green">- 12 139</td></tr>
-                        <tr><td>400+</td><td>1 065 420</td><td>1 032 460</td><td class="text-green">- 32 959</td></tr>
+                        <tr><td>100 - 200</td><td>1 093 105</td><td class="text-red">+ 65к</td></tr>
+                        <tr><td>200 - 400</td><td>367 109</td><td class="text-green">- 12к</td></tr>
+                        <tr><td>400+</td><td>1 032 460</td><td class="text-green">- 32к</td></tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="card col-span-4 highlight" style="justify-content: center; align-items: center; text-align: center;">
-                <i class="fa-solid fa-bolt" style="font-size: 60px; color: var(--neon-green); margin-bottom: 20px;"></i>
-                <h3 style="margin-bottom: 10px; justify-content: center;">Токсичний сток</h3>
-                <p>Реалізовано стоку (200+ днів) на суму <strong>>45 000 ₴</strong>.</p>
+                <i class="fa-solid fa-bolt" style="font-size: 50px; color: var(--neon-green); margin-bottom: 10px;"></i>
+                <p>Реалізовано токсичного стоку на суму <strong>>45к ₴</strong>.</p>
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 3: АСОРТИМЕНТ ТА АНАЛІЗ (ОРИГІНАЛЬНІ БЛОКИ) -->
+    <!-- СЕКЦІЯ 3: АСОРТИМЕНТ -->
     <section id="assortment">
         <div class="section-header" data-aos="fade-up">
-            <h2>Оптимізація Асортименту</h2>
+            <h2>Оптимізація та ABC-аналіз</h2>
         </div>
 
         <div class="grid-bento">
-            <!-- ABC Analysis -->
-            <div class="card col-span-4 highlight" data-aos="flip-up" data-aos-delay="100">
-                <h3 style="justify-content: center;"><i class="fa-solid fa-crown"></i> Група A <span style="font-size: 14px; color: var(--text-muted);">(Топ 20%)</span></h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 15px;">
+            <div class="card col-span-4 highlight">
+                <h3>Група A</h3>
+                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
                     <div class="value green">80%</div>
-                    <div class="label">Виторгу мережі</div>
+                    <div class="label">Виторгу</div>
                 </div>
-                <ul class="list-styled" style="font-size: 14px; margin-top: 10px;">
-                    <li><i class="fa-solid fa-check"></i> Картриджі Vaporesso</li>
-                    <li><i class="fa-solid fa-check"></i> Ароматизатори ElfLiQ</li>
-                    <li><i class="fa-solid fa-check"></i> Набори ChaserLab</li>
-                    <li><i class="fa-solid fa-check"></i> Ароматизатори Lucky</li>
+                <ul class="list-styled">
+                    <li><i class="fa-solid fa-check"></i> Vaporesso / ElfLiQ</li>
+                    <li><i class="fa-solid fa-check"></i> ChaserLab / Lucky</li>
                 </ul>
             </div>
-            <div class="card col-span-4" data-aos="flip-up" data-aos-delay="200">
-                <h3 style="justify-content: center; color: white;"><i class="fa-solid fa-layer-group"></i> Група B <span style="font-size: 14px; color: var(--text-muted);">(Середні 30%)</span></h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 15px;">
+            <div class="card col-span-4">
+                <h3>Група B</h3>
+                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
                     <div class="value">15%</div>
-                    <div class="label">Виторгу мережі</div>
+                    <div class="label">Виторгу</div>
                 </div>
-                <ul class="list-styled" style="font-size: 14px; margin-top: 10px;">
-                    <li><i class="fa-solid fa-check"></i> Девайси GeekVape / Lost Vape</li>
+                <ul class="list-styled">
+                    <li><i class="fa-solid fa-check"></i> GeekVape / Lost Vape</li>
                     <li><i class="fa-solid fa-check"></i> Набори Hype (+337%)</li>
-                    <li><i class="fa-solid fa-check"></i> Картриджі Oxva / GeekVape</li>
                 </ul>
             </div>
-            <div class="card col-span-4" data-aos="flip-up" data-aos-delay="300" style="border-color: rgba(255, 71, 87, 0.3);">
-                <h3 style="justify-content: center; color: var(--neon-red);"><i class="fa-solid fa-arrow-down-long"></i> Група C <span style="font-size: 14px; color: var(--text-muted);">(Нижні 50%)</span></h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 15px;">
+            <div class="card col-span-4">
+                <h3>Група C</h3>
+                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
                     <div class="value red">5%</div>
-                    <div class="label">Виторгу мережі</div>
+                    <div class="label">Виторгу</div>
                 </div>
-                <ul class="list-styled" style="font-size: 14px; margin-top: 10px;">
-                    <li><i class="fa-solid fa-xmark"></i> Oxva Девайси (-91к спад)</li>
-                    <li><i class="fa-solid fa-xmark"></i> In Bottle Puzzle (-78к спад)</li>
-                    <li><i class="fa-solid fa-xmark"></i> Набір Octobar (-55к спад)</li>
+                <ul class="list-styled">
+                    <li><i class="fa-solid fa-xmark"></i> In Bottle Puzzle</li>
+                    <li><i class="fa-solid fa-xmark"></i> Oxva Xlim GO</li>
                 </ul>
-            </div>
-
-            <!-- ВИВЕДЕННЯ З МАТРИЦІ -->
-            <div class="card col-span-6" data-aos="fade-right">
-                <h3><i class="fa-solid fa-trash-can" style="color: var(--neon-red);"></i> Стоп-закупівля</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-                    <ul class="list-styled">
-                        <li><i class="fa-solid fa-xmark"></i> Sqwiz / Рефрост</li>
-                        <li><i class="fa-solid fa-xmark"></i> Creepy / Dead Horse</li>
-                        <li><i class="fa-solid fa-xmark"></i> PE10000 / FL350</li>
-                    </ul>
-                    <ul class="list-styled">
-                        <li><i class="fa-solid fa-xmark"></i> Voopoo Doric Q</li>
-                        <li><i class="fa-solid fa-xmark"></i> OXVA XLIM GO</li>
-                        <li><i class="fa-solid fa-xmark"></i> GeekVape Sonder Q</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- ВВЕДЕННЯ В МАТРИЦУ -->
-            <div class="card col-span-6 highlight" data-aos="fade-left">
-                <h3><i class="fa-solid fa-rocket"></i> Новий асортимент 2026</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-                    <ul class="list-styled">
-                        <li><i class="fa-solid fa-check"></i> Phantom (Рідини)</li>
-                        <li><i class="fa-solid fa-check"></i> Vaporesso XROS Series</li>
-                        <li><i class="fa-solid fa-check"></i> OXVA NeXLIM</li>
-                    </ul>
-                    <ul class="list-styled">
-                        <li><i class="fa-solid fa-check"></i> OXVA XLIM GO 2</li>
-                        <li><i class="fa-solid fa-check"></i> Voopoo VINCI S</li>
-                        <li><i class="fa-solid fa-check"></i> Voopoo VMATE E2</li>
-                    </ul>
-                </div>
             </div>
 
             <!-- ТОВАРНА МАТРИЦЯ -->
-            <div class="card col-span-12 highlight" data-aos="zoom-in">
-                <h3><i class="fa-solid fa-table-cells"></i> Глобальна Товарна Матриця</h3>
-                <p style="font-size: 20px;">Матриця на понад <strong>1 000 000 комірок</strong>, яка стане головним інструментом з управління асортиментом у парі з автозамовником.</p>
-                <div style="margin-top: 25px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(222, 255, 154, 0.3);">
-                    <img src="https://raw.githubusercontent.com/ВАШ_ЛОГИН/ВАШ_РЕПО/main/matrix.png" alt="Скріншот товарної матриці" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; object-position: top; display: block;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div style="display: none; height: 200px; background: rgba(255,255,255,0.03); align-items: center; justify-content: center;">
-                        <p style="font-style: italic; color: var(--text-muted);">[ Візуалізація Матриці Асортименту ]</p>
+            <div class="card col-span-12 highlight">
+                <h3><i class="fa-solid fa-table-cells"></i> Товарна Матриця</h3>
+                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; border: 2px solid rgba(222, 255, 154, 0.4);">
+                    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/image_413a82.png" 
+                         alt="Матриця" style="width: 100%; height: auto; display: block;"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="display: none; height: 300px; background: rgba(255,255,255,0.03); align-items: center; justify-content: center; flex-direction: column; padding: 20px; text-align: center;">
+                        <i class="fa-solid fa-image" style="font-size: 60px; color: var(--text-muted); margin-bottom: 20px;"></i>
+                        <p style="font-style: italic; color: var(--text-muted); font-size: 20px; font-weight: 800;">[ image_413a82.png ]</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 4: ІНВЕСТИЦІЇ ТА ЕКОНОМІКА -->
+    <!-- СЕКЦІЯ 4: ІНВЕСТИЦІЇ -->
     <section id="investments">
         <div class="section-header" data-aos="fade-up">
             <h2>Інвестиції Постачальників</h2>
         </div>
-
         <div class="grid-bento">
-            <!-- Бренди -->
-            <div class="card col-span-4 highlight" data-aos="fade-up" data-aos-delay="100">
+            <div class="card col-span-4 highlight">
                 <h3><i class="fa-solid fa-handshake"></i> Hype</h3>
                 <p><strong>Товаром:</strong> 30 240 ₴</p>
-                <p><strong>Механіка:</strong> Знижка 9.6%.</p>
-                <p><strong>Бонус:</strong> Мотивація 3 000 ₴.</p>
+                <p>Механіка: Знижка <strong>9.6%</strong>.</p>
+                <p>Бонус: Мотивація <strong>3 000 ₴</strong>.</p>
             </div>
-            <div class="card col-span-4 highlight" data-aos="fade-up" data-aos-delay="200">
+            <div class="card col-span-4 highlight">
                 <h3><i class="fa-solid fa-handshake"></i> Phantom</h3>
                 <p><strong>Товаром:</strong> 30 294 ₴</p>
-                <p><strong>Платний вхід:</strong> 20 000 ₴ / міс.</p>
-                <p><strong>Умови:</strong> Гарантія повернення.</p>
+                <p>Платний вхід: <strong>20 000 ₴</strong> / міс.</p>
+                <p>Умови: Гарантія повернення.</p>
             </div>
-            <div class="card col-span-4 highlight" data-aos="fade-up" data-aos-delay="300">
+            <div class="card col-span-4 highlight">
                 <h3><i class="fa-solid fa-handshake"></i> Mix Bar</h3>
                 <p><strong>Товаром:</strong> 44 000 ₴</p>
-            </div>
-
-            <!-- Економіка -->
-            <div class="card col-span-12" data-aos="fade-right">
-                <h3><i class="fa-solid fa-sack-dollar"></i> Cash Flow Модель Промо</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Вартість наданого товару</td>
-                            <td>104 534 ₴</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Власні витрати мережі</strong></td>
-                            <td class="text-green">0 ₴</td>
-                        </tr>
-                        <tr>
-                            <td>Орієнтовний виторг (націнка ~100%)</td>
-                            <td>~ 209 000 ₴</td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 20px;"><strong>Чистий грошовий потік</strong></td>
-                            <td class="text-green" style="font-size: 20px;">+ 209 000 ₴</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- ROI -->
-            <div class="card col-span-12 highlight" data-aos="fade-left" style="justify-content: center; text-align: center;">
-                <h3>Власні Інвестиції</h3>
-                <div class="number-stat">
-                    <div class="value green">0 ₴</div>
-                </div>
-                <p style="margin-top: 20px; font-weight: 500;">Реалізація акційного товару = 100% чистий прибуток (~209к ₴).</p>
+                <p>Пріоритетна викладка на полицях.</p>
             </div>
         </div>
     </section>
@@ -619,61 +565,41 @@
     <!-- СЕКЦІЯ 5: СТРАТЕГІЯ -->
     <section id="strategy">
         <div class="section-header" data-aos="fade-up">
-            <h2>Вектор на Масштабування</h2>
+            <h2>Стратегічний Вектор</h2>
         </div>
-
         <div class="grid-bento">
-            <div class="card col-span-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="number-stat" style="margin-bottom: 20px;"><div class="value" style="color: rgba(255,255,255,0.1); font-size: 90px; position: absolute; top: -10px; right: 20px;">01</div></div>
-                <h3 style="position: relative; z-index: 2;">E-commerce</h3>
-                <p style="position: relative; z-index: 2;">Вектор на розширення асортименту, додавання описів, легкий редизайн бекграунду, агресивне акціонування B та C категорій.</p>
+            <div class="card col-span-4">
+                <h3><i class="fa-solid fa-globe"></i> E-commerce</h3>
+                <p>Редизайн бекграунду, додавання описів та агресивне акціонування категорій <strong>B та C</strong>.</p>
             </div>
-            <div class="card col-span-4 highlight" data-aos="zoom-in" data-aos-delay="200" style="border-color: var(--neon-green);">
-                <div class="number-stat" style="margin-bottom: 20px;"><div class="value" style="color: rgba(222, 255, 154, 0.1); font-size: 90px; position: absolute; top: -10px; right: 20px;">02</div></div>
-                <h3 style="position: relative; z-index: 2; color: var(--neon-green);">Тотальне очищення</h3>
-                <p style="position: relative; z-index: 2;">Необхідність опрацювання нової ціни та розгляд продажу з мінімальною націнкою, оскільки поточні акції показують повільний темп.</p>
+            <div class="card col-span-4 highlight">
+                <h3><i class="fa-solid fa-recycle"></i> Очищення</h3>
+                <p>Продаж залежалого товару за спецціною для вивільнення капіталу з <strong>мертвого стоку</strong>.</p>
             </div>
-            <div class="card col-span-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="number-stat" style="margin-bottom: 20px;"><div class="value" style="color: rgba(255,255,255,0.1); font-size: 90px; position: absolute; top: -10px; right: 20px;">03</div></div>
-                <h3 style="position: relative; z-index: 2;">Експансія Групи А</h3>
-                <p style="position: relative; z-index: 2;">Забезпечення 100% наявності топ-селерів. Пріоритетне розміщення новинок на золотих полицях.</p>
+            <div class="card col-span-4">
+                <h3><i class="fa-solid fa-up-long"></i> Експансія А</h3>
+                <p>Забезпечення <strong>100% наявності</strong> топ-селерів (Vaporesso, ElfLiQ) у всіх точках мережі.</p>
             </div>
         </div>
     </section>
 
-    <!-- ФУТЕР -->
-    <footer style="text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); margin-top: 50px; background: rgba(10, 10, 10, 0.8);">
-        <div class="logo" style="margin-bottom: 15px;">Pod <span>Shop</span></div>
-        <p style="color: var(--text-muted);">Порівняльна аналітика січень-лютий 2026</p>
+    <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); margin-top: 40px; background: rgba(10, 10, 10, 0.8);">
+        <p style="color: var(--text-muted); font-size: 16px; font-weight: 700;">Аналітика мережі Pod Shop — Лютий 2026</p>
     </footer>
 
     <!-- СКРИПТИ -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 50
-        });
-
-        // Анімація графіків (заповнення барів) при скролі
+        AOS.init({ duration: 800, once: true, offset: 50 });
         const barObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const bar = entry.target;
-                    const targetWidth = bar.getAttribute('data-width');
-                    setTimeout(() => {
-                        bar.style.width = targetWidth;
-                    }, 200); 
-                    observer.unobserve(bar);
+                    entry.target.style.width = entry.target.getAttribute('data-width');
+                    observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
-
-        document.querySelectorAll('.bar-fill').forEach(bar => {
-            barObserver.observe(bar);
-        });
+        document.querySelectorAll('.bar-fill').forEach(bar => barObserver.observe(bar));
     </script>
 </body>
 </html>
