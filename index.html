@@ -206,11 +206,10 @@
             position: relative;
         }
         .hero h1 { 
-            font-size: 64px; line-height: 1.1; margin-bottom: 15px; text-transform: uppercase; 
+            font-size: 64px; line-height: 1.1; text-transform: uppercase; 
             font-weight: 900;
         }
         .hero h1 span { color: var(--neon-green); }
-        .hero p { font-size: 22px; color: var(--text-muted); max-width: 800px; margin-bottom: 30px; font-weight: 700; }
 
         @media (max-width: 1024px) {
             .col-span-4 { grid-column: span 12; }
@@ -221,7 +220,6 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 38px; }
-            .hero p { font-size: 18px; }
         }
     </style>
 </head>
@@ -239,7 +237,7 @@
             <li><a href="#finance">Фінанси</a></li>
             <li><a href="#trends">Тренди</a></li>
             <li><a href="#inventory">Запаси</a></li>
-            <li><a href="#assortment">Оптимізація</a></li>
+            <li><a href="#assortment">Матриця</a></li>
             <li><a href="#investments">Інвестиції</a></li>
             <li><a href="#strategy">Стратегія</a></li>
         </ul>
@@ -247,7 +245,6 @@
 
     <header class="hero" id="home">
         <h1 data-aos="zoom-out" data-aos-duration="1000">Аналітика<br><span>Лютий 2026</span></h1>
-        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Компактний огляд виторгу та динаміки брендів.</p>
     </header>
 
     <!-- СЕКЦІЯ 1: ФІНАНСИ -->
@@ -482,48 +479,13 @@
     <!-- СЕКЦІЯ 3: АСОРТИМЕНТ -->
     <section id="assortment">
         <div class="section-header" data-aos="fade-up">
-            <h2>Оптимізація та ABC-аналіз</h2>
+            <h2>Товарна <span>Матриця</span></h2>
         </div>
 
         <div class="grid-bento">
-            <div class="card col-span-4 highlight">
-                <h3>Група A</h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
-                    <div class="value green">80%</div>
-                    <div class="label">Виторгу</div>
-                </div>
-                <ul class="list-styled">
-                    <li><i class="fa-solid fa-check"></i> Vaporesso / ElfLiQ</li>
-                    <li><i class="fa-solid fa-check"></i> ChaserLab / Lucky</li>
-                </ul>
-            </div>
-            <div class="card col-span-4">
-                <h3>Група B</h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
-                    <div class="value">15%</div>
-                    <div class="label">Виторгу</div>
-                </div>
-                <ul class="list-styled">
-                    <li><i class="fa-solid fa-check"></i> GeekVape / Lost Vape</li>
-                    <li><i class="fa-solid fa-check"></i> Набори Hype (+337%)</li>
-                </ul>
-            </div>
-            <div class="card col-span-4">
-                <h3>Група C</h3>
-                <div class="number-stat" style="text-align: center; margin-bottom: 10px;">
-                    <div class="value red">5%</div>
-                    <div class="label">Виторгу</div>
-                </div>
-                <ul class="list-styled">
-                    <li><i class="fa-solid fa-xmark"></i> In Bottle Puzzle</li>
-                    <li><i class="fa-solid fa-xmark"></i> Oxva Xlim GO</li>
-                </ul>
-            </div>
-
             <!-- ТОВАРНА МАТРИЦЯ -->
             <div class="card col-span-12 highlight">
-                <h3><i class="fa-solid fa-table-cells"></i> Товарна Матриця</h3>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; border: 2px solid rgba(222, 255, 154, 0.4);">
+                <div style="border-radius: 10px; overflow: hidden; border: 2px solid rgba(222, 255, 154, 0.4);">
                     <img src="image_413a82.png" 
                          alt="Матриця" style="width: 100%; height: auto; display: block;"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -578,13 +540,12 @@
             </div>
             <div class="card col-span-4">
                 <h3><i class="fa-solid fa-up-long"></i> Експансія А</h3>
-                <p>Забезпечення <strong>100% наявності</strong> топ-селерів (Vaporesso, ElfLiQ) у всіх точках мережі.</p>
+                <p>Забезпечення <strong>100% наявності</strong> топ-селерів (Vaporesso, ElfLiQ, Chaser, Lucky) у всіх точках мережі.</p>
             </div>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); margin-top: 40px; background: rgba(10, 10, 10, 0.8);">
-        <p style="color: var(--text-muted); font-size: 16px; font-weight: 700;">Аналітика мережі Pod Shop — Лютий 2026</p>
     </footer>
 
     <!-- СКРИПТИ -->
