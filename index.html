@@ -133,10 +133,10 @@
         .number-stat .value.red { color: var(--neon-red); }
         .number-stat .label { font-size: 14px; color: var(--text-muted); margin-top: 10px; text-transform: uppercase; font-weight: 600; }
 
-        .bar-chart { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+        .bar-chart { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
         .bar-row { display: flex; align-items: center; gap: 15px; }
-        .bar-label { width: 160px; font-size: 13px; color: var(--text-muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .bar-track { flex-grow: 1; background: rgba(255,255,255,0.05); height: 26px; border-radius: 6px; overflow: hidden; position: relative; }
+        .bar-label { width: 180px; font-size: 12px; color: var(--text-muted); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .bar-track { flex-grow: 1; background: rgba(255,255,255,0.05); height: 24px; border-radius: 6px; overflow: hidden; position: relative; }
         .bar-fill { 
             height: 100%; border-radius: 6px; position: absolute; left: 0; width: 0; 
             transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -146,7 +146,7 @@
 
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { padding: 14px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        th { color: var(--neon-green); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        th { color: var(--neon-green); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
         .text-green { color: var(--neon-green) !important; font-weight: 700; }
         .text-red { color: var(--neon-red) !important; font-weight: 700; }
 
@@ -156,14 +156,14 @@
         .list-styled li i.fa-check { color: var(--neon-green); }
         .list-styled li i.fa-xmark { color: var(--neon-red); }
 
-        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-size: 72px; text-transform: uppercase; line-height: 1; }
+        .hero { height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-size: 64px; text-transform: uppercase; line-height: 1; }
         .hero h1 span { color: var(--neon-green); }
-        .hero p { font-size: 24px; color: var(--text-muted); margin-top: 20px; }
+        .hero p { font-size: 20px; color: var(--text-muted); margin-top: 20px; }
 
         @media (max-width: 768px) {
             .col-span-8, .col-span-6, .col-span-4 { grid-column: span 12; }
-            .hero h1 { font-size: 42px; }
+            .hero h1 { font-size: 36px; }
             .nav-links { display: none; }
         }
     </style>
@@ -179,17 +179,17 @@
         <a href="#" class="logo">Pod <span>Shop</span></a>
         <ul class="nav-links">
             <li><a href="#finance">Фінанси</a></li>
-            <li><a href="#trends">Тренди</a></li>
+            <li><a href="#trends">Рідини</a></li>
+            <li><a href="#devices">Девайси</a></li>
             <li><a href="#inventory">Запаси</a></li>
             <li><a href="#assortment">Матриця</a></li>
-            <li><a href="#investments">Інвестиції</a></li>
             <li><a href="#strategy">Стратегія</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <h1 data-aos="zoom-out">Аналітика<br><span>Лютий 2025</span></h1>
-        <p data-aos="fade-up" data-aos-delay="300">Порівняльний аналіз продажів: Січень vs Лютий</p>
+        <p data-aos="fade-up" data-aos-delay="300">Повна актуалізація всіх товарних лінійок</p>
     </header>
 
     <!-- СЕКЦІЯ 1: ФІНАНСИ -->
@@ -231,65 +231,125 @@
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 2: ТРЕНДИ -->
+    <!-- СЕКЦІЯ 2: РІДИНИ -->
     <section id="trends">
         <div class="section-header" data-aos="fade-up">
-            <h2>Динаміка <span>Брендів</span></h2>
+            <h2>Динаміка <span>Рідин</span></h2>
         </div>
 
         <div class="grid-bento">
-            <div class="card col-span-6" data-aos="fade-right">
-                <h3><i class="fa-solid fa-rocket"></i> ТОП Росту (Лютий)</h3>
-                <table>
-                    <thead>
-                        <tr><th>Бренд</th><th>Приріст (грн)</th><th>Динаміка</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>ElfLiQ (Ароматизатори)</td><td class="text-green">+479 300</td><td class="text-green">+117.5%</td></tr>
-                        <tr><td>Hype (Набори)</td><td class="text-green">+41 710</td><td class="text-green">+59.5%</td></tr>
-                        <tr><td>GeekVape (Пристрої)</td><td class="text-green">+14 552</td><td class="text-green">+25.6%</td></tr>
-                        <tr><td>Lost Vape (Картриджі)</td><td class="text-green">+22 665</td><td class="text-green">+29.3%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="card col-span-6" data-aos="fade-left">
-                <h3><i class="fa-solid fa-arrow-trend-down" style="color: var(--neon-red);"></i> ТОП Падіння (Лютий)</h3>
-                <table>
-                    <thead>
-                        <tr><th>Бренд</th><th>Спад (грн)</th><th>Динаміка</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Oxva (Пристрої)</td><td class="text-red">-91 804</td><td class="text-red">-59.3%</td></tr>
-                        <tr><td>In Bottle Puzzle</td><td class="text-red">-80 920</td><td class="text-red">-52.3%</td></tr>
-                        <tr><td>ChaserLab (Набори)</td><td class="text-red">-58 258</td><td class="text-red">-4.8%</td></tr>
-                        <tr><td>Octobar (Набори)</td><td class="text-red">-55 171</td><td class="text-red">-7.9%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Detailed Brand Charts -->
             <div class="card col-span-12 highlight" data-aos="zoom-in">
-                <h3><i class="fa-solid fa-droplet"></i> Динаміка Рідин (Набори та Ароматизатори)</h3>
+                <h3><i class="fa-solid fa-droplet"></i> Виручка по лінійкам рідин (Лютий)</h3>
                 <div class="bar-chart">
                     <div class="bar-row">
                         <div class="bar-label">ChaserLab</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="95%" style="background: var(--neon-red);">1.15 млн ₴ (-4.8%)</div></div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);">1 149 022 ₴ (-4.8%)</div></div>
                     </div>
                     <div class="bar-row">
-                        <div class="bar-label">Lucky (Ароми)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="80%" style="background: var(--neon-green);">935.5к ₴ (+7.2%)</div></div>
+                        <div class="bar-label">Lucky (Ароматизатори)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="82%" style="background: var(--neon-green);">935 510 ₴ (+7.2%)</div></div>
                     </div>
                     <div class="bar-row">
-                        <div class="bar-label">ElfLiQ (Ароми)</div>
-                        <div class="bar-track"><div class="bar-fill" data-width="75%" style="background: var(--neon-green);">887.1к ₴ (+117.5%)</div></div>
+                        <div class="bar-label">ElfLiQ (Ароматизатор)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="78%" style="background: var(--neon-green);">887 100 ₴ (+117.5%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Octobar (Набір)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="56%" style="background: var(--neon-red);">640 560 ₴ (-7.9%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Lucky (Набір)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="34%" style="background: var(--neon-red);">395 650 ₴ (-11.2%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Aroma (Ароми)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="19%" style="background: #cbd5e1;">215 320 ₴ (-0.7%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">FlavorLab (Набір)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="14%" style="background: #cbd5e1;">163 270 ₴ (-1.4%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Elfliq (Набір)</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="12%" style="background: var(--neon-green);">137 250 ₴ (+64.1%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Punch / Hype / Wick</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="10%" style="background: var(--neon-green);">~110 000 ₴ (Mixed)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">In Bottle Puzzle</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="6%" style="background: var(--neon-red);">73 900 ₴ (-52.3%)</div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 3: ЗАПАСИ -->
+    <!-- СЕКЦІЯ 3: ПРИСТРОЇ ТА КАРТРИДЖІ -->
+    <section id="devices">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Девайси та <span>Картриджі</span></h2>
+        </div>
+
+        <div class="grid-bento">
+            <!-- Devices Chart -->
+            <div class="card col-span-6 highlight" data-aos="fade-right">
+                <h3><i class="fa-solid fa-mobile-screen"></i> POD-системи (Виручка)</h3>
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <div class="bar-label">Vaporesso</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-red);">552 401 ₴ (-4.3%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Voopoo</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="36%" style="background: var(--neon-red);">197 348 ₴ (-10.5%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">GeekVape</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="13%" style="background: var(--neon-green);">71 247 ₴ (+25.6%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Oxva</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="11%" style="background: var(--neon-red);">63 043 ₴ (-59.3%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Lost Vape / Elf Bar</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="7%" style="background: #cbd5e1;">~35 000 ₴</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cartridges Chart -->
+            <div class="card col-span-6 highlight" data-aos="fade-left">
+                <h3><i class="fa-solid fa-plug"></i> Картриджі (Виручка)</h3>
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <div class="bar-label">Vaporesso</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="100%" style="background: var(--neon-green);">1 052 549 ₴ (+4.2%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Voopoo</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="41%" style="background: var(--neon-green);">428 694 ₴ (+0.8%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Oxva</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="16%" style="background: var(--neon-red);">164 958 ₴ (-3.6%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">GeekVape</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="13%" style="background: var(--neon-green);">131 500 ₴ (+23.8%)</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Lost Vape</div>
+                        <div class="bar-track"><div class="bar-fill" data-width="10%" style="background: var(--neon-green);">99 931 ₴ (+29.3%)</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦІЯ 4: ЗАПАСИ -->
     <section id="inventory">
         <div class="section-header" data-aos="fade-up">
             <h2>Оборотність <span>та Запаси</span></h2>
@@ -298,15 +358,14 @@
         <div class="grid-bento">
             <div class="card col-span-12 highlight" data-aos="zoom-in-up">
                 <h3><i class="fa-solid fa-stopwatch"></i> Динаміка Оборотності (Дні)</h3>
-                <!-- SVG Chart Mockup -->
                 <svg viewBox="0 0 1000 250" style="width: 100%; height: auto; margin-top: 20px;">
                     <polyline points="100,180 500,50 900,100" fill="none" stroke="var(--neon-green)" stroke-width="4"></polyline>
                     <circle cx="100" cy="180" r="8" fill="var(--neon-green)"></circle>
                     <circle cx="500" cy="50" r="8" fill="var(--neon-green)"></circle>
                     <circle cx="900" cy="100" r="8" fill="var(--neon-green)"></circle>
-                    <text x="100" y="220" fill="#fff" text-anchor="middle">Грудень: 98.1</text>
-                    <text x="500" y="30" fill="#fff" text-anchor="middle">Січень: 107.8</text>
-                    <text x="900" y="80" fill="var(--neon-green)" text-anchor="middle">Лютий: 103.5 (-4.3)</text>
+                    <text x="100" y="220" fill="#fff" text-anchor="middle" font-size="14">Грудень: 98.1</text>
+                    <text x="500" y="30" fill="#fff" text-anchor="middle" font-size="14">Січень: 107.8</text>
+                    <text x="900" y="80" fill="var(--neon-green)" text-anchor="middle" font-size="14">Лютий: 103.5 (-4.3)</text>
                 </svg>
             </div>
 
@@ -332,81 +391,41 @@
         </div>
     </section>
 
-    <!-- СЕКЦІЯ 4: МАТРИЦЯ ТА АСОРТИМЕНТ -->
+    <!-- СЕКЦІЯ 5: МАТРИЦЯ -->
     <section id="assortment">
         <div class="section-header" data-aos="fade-up">
             <h2>Товарна <span>Матриця</span></h2>
         </div>
 
         <div class="grid-bento">
-            <!-- ABC Analysis -->
-            <div class="card col-span-4 highlight" data-aos="flip-up">
-                <h3>Група A (80%)</h3>
+            <div class="card col-span-4 highlight">
+                <h3>Група A (Топ-селери)</h3>
                 <ul class="list-styled">
-                    <li><i class="fa-solid fa-check"></i> Картриджі Vaporesso</li>
-                    <li><i class="fa-solid fa-check"></i> Ароматизатори ElfLiQ</li>
-                    <li><i class="fa-solid fa-check"></i> Набори ChaserLab</li>
+                    <li><i class="fa-solid fa-check"></i> Vaporesso (всі типи)</li>
+                    <li><i class="fa-solid fa-check"></i> ElfLiQ Ароми</li>
+                    <li><i class="fa-solid fa-check"></i> ChaserLab Набори</li>
                 </ul>
             </div>
-            <div class="card col-span-4" data-aos="flip-up" data-aos-delay="100">
-                <h3>Група B (15%)</h3>
+            <div class="card col-span-4">
+                <h3>Група B (Середняки)</h3>
                 <ul class="list-styled">
-                    <li><i class="fa-solid fa-check"></i> GeekVape / Lost Vape</li>
-                    <li><i class="fa-solid fa-check"></i> Набори Hype</li>
+                    <li><i class="fa-solid fa-check"></i> GeekVape Sonder/Q</li>
+                    <li><i class="fa-solid fa-check"></i> Hype Набори</li>
                 </ul>
             </div>
-            <div class="card col-span-4" data-aos="flip-up" data-aos-delay="200" style="border-color: var(--neon-red);">
-                <h3>Група C (5%)</h3>
+            <div class="card col-span-4" style="border-color: var(--neon-red);">
+                <h3>Група C (На виведення)</h3>
                 <ul class="list-styled">
-                    <li><i class="fa-solid fa-xmark"></i> Oxva Девайси</li>
+                    <li><i class="fa-solid fa-xmark"></i> Oxva Xlim GO</li>
                     <li><i class="fa-solid fa-xmark"></i> In Bottle Puzzle</li>
                 </ul>
             </div>
 
             <div class="card col-span-12 highlight" data-aos="zoom-in">
-                <h3><i class="fa-solid fa-table-cells"></i> Глобальна Товарна Матриця</h3>
-                <p>Інструмент управління на 1 000 000+ комірок для автоматизації замовлень.</p>
-                <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(222, 255, 154, 0.3);">
-                    <!-- Placeholder for the image mentioned by user -->
-                    <div style="height: 250px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-style: italic; color: var(--text-muted);">
-                        [ Візуалізація Матриці Асортименту ]
-                    </div>
+                <h3><i class="fa-solid fa-table-cells"></i> Візуалізація Матриці Асортименту</h3>
+                <div style="height: 200px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                    <p style="font-style: italic; color: var(--text-muted);">[ Інструментарій на 1 000 000 комірок активовано ]</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- СЕКЦІЯ 5: ІНВЕСТИЦІЇ -->
-    <section id="investments">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Інвестиції <span>Постачальників</span></h2>
-        </div>
-
-        <div class="grid-bento">
-            <div class="card col-span-4 highlight">
-                <h3>Hype</h3>
-                <p>Товарний бонус: <strong>30 240 ₴</strong></p>
-                <p>Механіка: Знижка 9.6%</p>
-            </div>
-            <div class="card col-span-4 highlight">
-                <h3>Phantom</h3>
-                <p>Товарний бонус: <strong>30 294 ₴</strong></p>
-                <p>Умови: Гарантія повернення</p>
-            </div>
-            <div class="card col-span-4 highlight">
-                <h3>Mix Bar</h3>
-                <p>Товарний бонус: <strong>44 000 ₴</strong></p>
-            </div>
-
-            <div class="card col-span-12">
-                <h3>Cash Flow Модель Промо</h3>
-                <table>
-                    <tbody>
-                        <tr><td>Вартість наданого товару</td><td>104 534 ₴</td></tr>
-                        <tr><td>Власні витрати мережі</td><td class="text-green">0 ₴</td></tr>
-                        <tr><td style="font-size: 18px; font-weight: 800;">Очікуваний прибуток</td><td class="text-green" style="font-size: 18px; font-weight: 800;">+209 000 ₴</td></tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -414,27 +433,23 @@
     <!-- СЕКЦІЯ 6: СТРАТЕГІЯ -->
     <section id="strategy">
         <div class="section-header" data-aos="fade-up">
-            <h2>Вектор <span>Масштабування</span></h2>
+            <h2>Стратегія <span>Масштабування</span></h2>
         </div>
 
         <div class="grid-bento">
-            <div class="card col-span-4">
-                <h3 style="color: var(--text-muted);">01. E-commerce</h3>
-                <p>Розширення асортименту, агресивне акціонування категорій B та C для очищення складів.</p>
+            <div class="card col-span-6 highlight">
+                <h3 style="color: var(--neon-green);">01. Очищення складів</h3>
+                <p>Максимальні знижки на категорію C (Oxva, In Bottle) для вивільнення капіталу під закупівлю ElfLiQ та Vaporesso.</p>
             </div>
-            <div class="card col-span-4 highlight">
-                <h3 style="color: var(--neon-green);">02. Очищення</h3>
-                <p>Перегляд цін на неліквід та продаж з мінімальною націнкою для вивільнення капіталу.</p>
-            </div>
-            <div class="card col-span-4">
-                <h3 style="color: var(--text-muted);">03. Експансія А</h3>
-                <p>Забезпечення 100% наявності топ-селерів (Vaporesso, ElfLiQ) на всіх точках.</p>
+            <div class="card col-span-6 highlight">
+                <h3 style="color: var(--neon-green);">02. Глобальна наявність А</h3>
+                <p>Забезпечення 100% стоку по ТОП-10 позиціям Vaporesso, оскільки вони формують основний трафік.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        Pod Shop Analytics © 2025 | Порівняльна аналітика січень-лютий
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 13px;">
+        Pod Shop Analytics | Актуалізовано: Лютий 2025
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
